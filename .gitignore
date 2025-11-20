@@ -1,0 +1,29 @@
+# Wails
+build/bin/
+build/wails.exe
+build/wails
+wails.exe
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Go
+go.work
+go.work.sum
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Data (if accidentally created in project root)
+.diary/
+*.log
