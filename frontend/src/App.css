@@ -170,41 +170,133 @@ textarea {
 }
 
 .editor-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    height: 100vh;
+}
+
+.editor-card {
+    background: #161b26;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
+    max-height: 90vh;
 }
 
 .editor-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
-.editor-grid {
-    display: grid;
-    gap: 1.5rem;
-    flex: 1;
+.back-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+.entry-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 1.5rem;
+}
+
+.editor-scroll-area {
     overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.editor-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.editor-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.editor-scroll-area::-webkit-scrollbar-thumb {
+    background: #2d3748;
+    border-radius: 3px;
+}
+
+.editor-section {
+    margin-bottom: 1.5rem;
 }
 
 .editor-section h3 {
-    color: var(--accent);
+    font-size: 0.95rem;
+    color: #94a3b8;
     margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
 .editor-section textarea {
     width: 100%;
-    min-height: 120px;
+    min-height: 80px;
     resize: vertical;
-    background: #161b26;
-    border: 1px solid var(--border);
-    color: white;
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
     padding: 1rem;
     border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.editor-section textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.editor-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.btn-icon:hover {
+    color: var(--danger);
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-success {
+    background-color: #10b981 !important;
+    /* Emerald 500 */
+    cursor: default;
 }
 
 /* Entries Grid (if we have entries) */

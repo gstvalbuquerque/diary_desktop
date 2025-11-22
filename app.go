@@ -79,11 +79,15 @@ func (a *App) loadDiary(username string) error {
 	return nil
 }
 
-func (a *App) GetEntry(date string) (diary.DiaryEntry, bool) {
+func (a *App) GetEntry(date string) *diary.DiaryEntry {
 	if a.currentDiary == nil {
-		return diary.DiaryEntry{}, false
+		return nil
 	}
-	return a.currentDiary.GetEntry(date)
+	entry, exists := a.currentDiary.GetEntry(date)
+	if !exists {
+		return nil
+	}
+	return &entry
 }
 
 func (a *App) SaveEntry(date, section, content string) error {

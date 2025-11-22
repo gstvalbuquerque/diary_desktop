@@ -6,7 +6,7 @@ export function DeleteEntry(arg1:string):Promise<void>;
 
 export function GetCurrentUser():Promise<string>;
 
-export function GetEntry(arg1:string):Promise<diary.DiaryEntry|boolean>;
+export function GetEntry(arg1:string):Promise<diary.DiaryEntry>;
 
 export function ListDates():Promise<Array<string>>;
 
